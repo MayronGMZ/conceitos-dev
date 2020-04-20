@@ -1,9 +1,10 @@
 const express = require('express')
 const { uuid } = require('uuidv4') // Biblioteca que gera um id único
+const cors = require('cors') // Importando o CORS - Cross-Origin Resource Sharing
 
 const app = express() // Função que cria um server
 
-
+app.use(cors())
 app.use(express.json()) // Middleware que trata a req baseado no Content-Type header.
 
 const projects = [] // Cria um array de projects
